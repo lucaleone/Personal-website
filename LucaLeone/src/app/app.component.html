@@ -1,0 +1,8 @@
+<div class="page flex flexWrap width100">
+  <app-profile></app-profile>
+  <main class="moving-bg" [ngClass]="this.router.url=='/projects'? 'bkgProjects': this.router.url=='/contacts'? 'bkgContacts' : 'bkgSkills'">
+
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
