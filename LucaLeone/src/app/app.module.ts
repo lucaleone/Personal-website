@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './Components/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProfileComponent } from './Components/profile/profile.component';
 import { ContactsComponent } from './Components/contacts/contacts.component';
@@ -14,7 +13,6 @@ import { SkillsComponent } from './Components/skills/skills.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     ProfileComponent,
     ContactsComponent,
     ProjectsListComponent,

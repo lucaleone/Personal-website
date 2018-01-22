@@ -1,17 +1,16 @@
 :root {
-  --font-size: 16px;
+  --font-size: 17px;
   --margin-layout: 20px;
   --half-margin-layout: 10px;
   --double-margin-layout: 40px;
   --negative-margin-layout: -20px;
   --Luca-accent: #c15700;
-  --Luca-accent2: #091748;
-  --Luca-accent3: #007646;
+  --Luca-accent2: #003561;
+  --Luca-accent3: #298753;
   --Luca-red: #B30000;
   --Luca-darkGray: rgb(78, 78, 78);
   --Luca-mediumGray: #828282;
-  --Luca-lightGray: rgb(241, 241, 241);
-  --Luca-header-height: 25rem
+  --Luca-lightGray: rgb(252, 252, 252);
 }
 
 * {
@@ -23,11 +22,20 @@ body, html {
   padding: 0;
   font-size: var(--font-size, 16px);
   background: white;
-  /*var(--Luca-lightGray, rgb(241, 241, 241));*/
+  overflow: hidden;
+}
+
+:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  /*font-family: 'EB Garamond', serif;*/
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
 }
 
 img, embed, object, video {
@@ -43,12 +51,12 @@ button, input {
 
 button,
 input[type=button] {
-  transition: all 0.3s ease-out;
+  transition: all 0.5ms ease-out;
 }
 
 button:hover,
 input[type=button]:hover {
-  font-size: 0.8rem;
+  background-color: var(--Luca-mediumGray, #828282);
 }
 
 button.disabled,
@@ -64,34 +72,41 @@ h1, h2, h3, p, ul {
   padding: 0px;
 }
 
-h1, h2, h3 {
+h2, h3 {
   color: var(--Luca-accent2, #0E2676);
 }
 
 h1 {
   color: black;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 1.9rem;
 }
 
 h2 {
   font-weight: 200;
+  font-size: 1.4rem;
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 ul {
   list-style-type: none;
 }
-strong{
-  font-size: 0.9rem;
+
+li, li * {
+  line-height: 1.8rem !important;
+}
+
+strong {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--Luca-accent, #ae5d00);
 }
+
 a {
-  font-weight: 600;
   text-decoration: none;
   color: black;
 }
@@ -117,43 +132,22 @@ textarea {
   resize: none;
 }
 
-header {
+main {
+  height: 45%;
   width: 100%;
-  height: var(--Luca-header-height, 20rem);
+  overflow: auto;
 }
 
 .page {
-  height: 100vh;
-}
-
-main {
-  height: 40%;
-  flex-grow: 1;
-}
-
-.loading {
-  display: none;
-  position: fixed;
   height: 100%;
   width: 100%;
-  background: #B30000;
-  padding-top: 25vh;
-  text-align: center;
-  color: white;
-  z-index: -1;
-}
-
-.loading img {
-  height: 3.3rem;
-}
-
-app-root:empty + .loading {
-  display: block;
-  z-index: 100;
+  display: flex;
+  flex-flow:column wrap;
 }
 
 /*Utility*/
 .flex {
+  display: -webkit-flex; /* Safari */
   display: flex;
 }
 
@@ -204,6 +198,7 @@ app-root:empty + .loading {
 .texCenter {
   text-align: center;
 }
+
 .fontBold {
   font-weight: bold;
 }
@@ -236,29 +231,7 @@ app-root:empty + .loading {
 
 .lineWidth {
   width: 1rem;
-}
-
-::-webkit-scrollbar {
-  height: 0; /* remove scrollbar space */
-  background: transparent; /* optional: just make scrollbar invisible */
-}
-
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.overflow {
-  overflow: hidden;
-}
-
-.floatLeft {
-  float: left;
-}
-
-.floatRight {
-  float: right;
+  height: 1rem;
 }
 
 .paddingLayoutRoule {
@@ -275,6 +248,14 @@ app-root:empty + .loading {
 
 .paddingDoubleLayoutRoule {
   padding: var(--double-margin-layout, 40px);
+}
+
+.line {
+  width: 50%;
+  height: 2px;
+  margin-top: 0.4rem;
+  opacity: 0.6;
+  background-color: var(--Luca-accent2, #003561);
 }
 
 .paddingTop0 {
@@ -299,150 +280,31 @@ app-root:empty + .loading {
   background-color: var(--Luca-lightGray, rgb(241, 241, 241));
   border: 0;
   border-radius: 3px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: var(--half-margin-layout, 10px);
 }
-
-.pageButtonsContainer {
-  position: fixed;
-  right: var(--margin-layout, 20px);
-  bottom: var(--margin-layout, 20px);
-  z-index: 2;
+/*remove??*/
+.profileInfo {
+  margin-left: 1rem;
 }
 
-.pageButtonsContainer > * {
-  width: 2.9rem;
-  height: 2.9rem;
-  margin-top: 1rem;
-  border-radius: 50%;
-  border: 0;
-  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, .22);
-  transition: box-shadow 0.2s ease-in;
-  background-color: white;
-  fill: black;
-}
 
-.pageButtonsContainer > *:last-child {
-  width: 3.3rem;
-  height: 3.3rem;
-  background-color: var(--Luca-red, #B30000);
-  color: white;
-}
-
-.pageButtonsContainer > *:hover {
-  box-shadow: none;
-}
-
-.calendarIcon {
-  /*background-image: url('assets/calendarBlack.png');*/
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  color: transparent;
-}
-
-.calendarIcon::-webkit-inner-spin-button,
-.calendarIcon::-webkit-clear-button,
-.calendarIcon::-webkit-datetime-edit-month-field,
-.calendarIcon::-webkit-datetime-edit-day-field,
-.calendarIcon::-webkit-datetime-edit-year-field {
-  -webkit-appearance: none;
-  display: none;
-}
-
-.calendarIcon::-webkit-calendar-picker-indicator {
-  color: transparent;
-  background-color: transparent;
-  width: 100%;
-  height: 100%;
-  margin: 0;
+div.scrollable {
+  display: inline-flex;
 }
 
 .card {
-  width: 20rem;
-  height: 100%;
+  width: 19rem;
   background: white;
   border-radius: 3px;
   padding: var(--half-margin-layout, 10px);
 }
-.FullScreenCard {
-  width: 100%;
-  height: 100%;
-  background: white;
-  border-radius: 3px;
-  padding: var(--half-margin-layout, 10px);
+.card>ul {
+  padding-top: var(--half-margin-layout, 10px);
+  padding-bottom: var(--half-margin-layout, 10px);
 }
-.cardImg {
-  height: 9rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.cardDetail {
-  position: relative;
-  height: 12rem;
-  padding: var(--margin-layout, 16px);
-  padding-top: var(--half-margin-layout, 8px);
-  background: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
-  transition: margin 0.2s ease-in;
-}
-
-.cardDetailTmp {
-  position: relative;
-  padding: var(--margin-layout, 16px);
-  padding-top: var(--half-margin-layout, 8px);
-  background: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
-  transition: margin 0.2s ease-in;
-}
-
-.cardRoundButtonContainer {
-  position: absolute;
-  height: 3rem;
-  display: flex;
-  flex-direction: revert;
-  right: var(--margin-layout, 16px);
-  top: -1.65rem;
-  margin-left: auto;
-}
-
-.cardRoundButtonContainer > button {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  border: 0;
-  background-size: 40%;
-  margin-left: 1rem;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-}
-
-.cardRoundButtonContainer > button:hover {
-  box-shadow: none;
-}
-
-.pageTitle {
-  padding: var(--margin-layout, 16px);
-  height: 10rem;
-  width: 100%;
-  color: white;
-  text-align: left;
-  background-color: var(--Luca-darkGray, rgb(78, 78, 78)) no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-div.scrollmenu {
-  width: 100vw;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-}
-
-div.scrollmenu > div {
-  display: inline-block;
-  white-space: normal;
+.accentFont {
+  color: var(--Luca-accent, #c15700);;
 }
 
 .accentButton {
@@ -456,43 +318,67 @@ div.scrollmenu > div {
   color: white;
   border-color: var(--Luca-mediumGray, #828282);
 }
-.pagesLinks>span{
-  font-size: 0.9rem;
-  font-weight: 700;
+.linkSymbol {
+  font-size: 0.5rem;
+  vertical-align: top;
+}
+.pagesLinks{
+  display: flex;
+  justify-content: space-evenly;
+}
+.pagesLinks>div{
+  padding: 1rem 0.2rem;
+}
+.pagesLinks span {
+  display: block;
+  font-size: 1.15rem;
   text-transform: uppercase;
+  cursor: pointer;
   background: var(--Luca-accent, #ae5d00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.fontColorSkills{
-  background-image: linear-gradient(to right, rgb(67, 233, 123) 0, rgb(56, 249, 215) 100%) !important;
- }
-.fontColorProjects {
+.fontColorSkills span {
+  background-image: linear-gradient(to right, #43d863 0, #32d8d9 100%) !important;
+}
+
+.fontColorProjects span {
   background-image: linear-gradient(to right, rgb(48, 207, 208) 0, rgb(51, 8, 103) 100%) !important;
 }
-.fontColorContacts{
-  background-image: linear-gradient(to right, rgb(69, 38, 148) 0, rgb(244, 59, 71) 100%) !important;
+
+.fontColorContacts span{
+  background-image: linear-gradient(to right, rgb(69, 38, 148) 0, rgb(207, 74, 0) 100%) !important;
 }
-.bkgSkills{
+
+.bkgSkills {
   background-position: 0;
 }
+
 .bkgProjects {
   background-position: -200vw;
 }
-.bkgContacts{
+
+.bkgContacts {
   background-position: -400vw;
 }
+.mobile {
+  display: inherit !important;
+}
+.desktop {
+  display: none !important;
+}
 .moving-bg {
-  background-image: linear-gradient(to right, rgb(67, 233, 123) 0, rgb(56, 249, 215) 100vw,
-                                              rgb(48, 207, 208) 200vw, rgb(51, 8, 103) 300vw,
-                                              rgb(69, 38, 148) 400vw, rgb(244, 59, 71) 500vw);
+  background-image: linear-gradient(to right,
+  #43d863 0, #32d8d9 100vw,
+  rgb(48, 207, 208) 200vw, rgb(51, 8, 103) 300vw,
+  rgb(69, 38, 148) 400vw, rgb(207, 74, 0) 500vw);
   background-size: 500vw 100%;
   will-change: background-position;
   transition: background-position 0.8s ease-out;
 }
 
-@media only screen and (max-height: 680px) {
+@media only screen and (min-height: 541px) and (max-height: 680px) {
   :root {
     --font-size: 15px;
     --margin-layout: 16px;
@@ -502,17 +388,27 @@ div.scrollmenu > div {
   }
 }
 
-@media only screen and (max-height: 540px) {
+@media only screen and (min-height: 481px) and (max-height: 540px) {
   :root {
-    --font-size: 12px;
-    --margin-layout: 16px;
-    --half-margin-layout: 8px;
-    --double-margin-layout: 32px;
-    --negative-margin-layout: -16px;
+    --font-size: 14px;
+    --margin-layout: 14px;
+    --half-margin-layout: 7px;
+    --double-margin-layout: 28px;
+    --negative-margin-layout: -14px;
   }
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (max-height: 480px) {
+  :root {
+    --font-size: 12px;
+    --margin-layout: 12px;
+    --half-margin-layout: 6px;
+    --double-margin-layout: 24px;
+    --negative-margin-layout: -12px;
+  }
+}
+
+@media only screen and (min-width: 700px), only screen and (orientation: landscape) {
   .mobile {
     display: none !important;
   }
@@ -520,16 +416,20 @@ div.scrollmenu > div {
   .desktop {
     display: inherit !important;
   }
-}
-
-@media only screen and (min-width: 700px) {
-  ::-webkit-scrollbar {
-    height: 0.7rem;
-    background: rgba(116, 116, 116, 0.8);
+  .page {
+    flex-flow: row nowrap!important;
+   }
+  .page>* {
+    height: 100%!important;
   }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 0px;
-    background: rgba(255, 255, 255, 0.5);
+  div.scrollable {
+    display: block!important;
+  }
+  main{
+    width: 50%!important;
+    flex-grow: 1;
+  }
+  .card{
+    width: 100%;
   }
 }

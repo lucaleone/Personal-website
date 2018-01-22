@@ -5,14 +5,22 @@
   <h2>Software Engineer</h2>
   <br>
   <h3>Passionate software engineer with 4+ years of experience, I love to spread my passion and competence.</h3>
-  <br>
-  <hr class="width50">
+  <div class="line elementCenter"></div>
   <div class="pagesLinks">
-    <span routerLink="" class="fa fa-code fontBold" [routerLinkActiveOptions]="{exact: true}"
-          routerLinkActive="fontColorSkills"><strong> Skills &emsp;</strong></span>
-    <span routerLink="projects" class="fa fa-lightbulb-o fontBold"
-          routerLinkActive="fontColorProjects"><strong> Projects &emsp;</strong></span>
-    <span routerLink="contacts" class="fa fa-address-card-o fontBold"
-          routerLinkActive="fontColorContacts"><strong> Contacts</strong></span>
+    <div routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="fontColorSkills">
+      <span class="fas fa-code"><strong> Skills</strong></span>
+      <span class="mobile fas fa-caret-down fa-lg"></span>
+      <span class="desktop fas fa-caret-right"></span>
+    </div>
+    <!--<div routerLink="/projects" routerLinkActive="fontColorProjects">-->
+      <!--<span class="far fa-lightbulb"><strong> Projects</strong></span>-->
+    <!--<span class="mobile fas fa-caret-down fa-lg"></span>-->
+    <!--<span class="desktop fas fa-caret-right"></span>-->
+    <!--</div>-->
+    <div routerLink="/contacts" routerLinkActive="fontColorContacts">
+      <span class="fa fas fa-at"><strong>Contacts</strong></span>
+      <span class="mobile fas fa-caret-down fa-lg"></span>
+      <span class="desktop fas fa-caret-right"></span>
+    </div>
   </div>
 </header>

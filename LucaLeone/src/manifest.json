@@ -1,18 +1,13 @@
 {
   "lang": "en",
   "dir": "ltr",
-  "name": "ilClub",
-  "description": "cose...",
-  "short_name": "ilClub",
+  "name": "Luca Leone",
+  "description": "Luca Leone Personal website",
+  "short_name": "Luca Leone",
   "icons": [
     {
       "src": "icons/favicon-48x48.png",
       "sizes": "48x48",
-      "type": "image/png"
-    },
-    {
-      "src": "icons/icon-72x72.png",
-      "sizes": "72x72",
       "type": "image/png"
     },
     {
@@ -31,8 +26,8 @@
       "type": "image/png"
     },
     {
-      "src": "icons/icon-255x255.png",
-      "sizes": "256x256",
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
       "type": "image/png"
     },
     {
@@ -42,9 +37,9 @@
     }
   ],
   "scope": "/",
-  "start_url": "/?utm_source=homescreen",
+  "start_url": "/",
   "orientation": "portrait",
   "display": "standalone",
-  "theme_color": "#B30000",
-  "background_color": "#B30000"
+  "theme_color": "white",
+  "background_color": "white"
 }
