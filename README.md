@@ -1,5 +1,5 @@
 # Luca Leone Personal website
-Web site created in Angular
+Web site created in Angular<br />
 Under the Hood:<br />
 📐 Responsive: The web site adapts to any formats  <br />
 🚀 Progressive Web App: The web site adapts to any formats  <br />
