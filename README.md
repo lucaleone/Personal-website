@@ -2,7 +2,7 @@
 Web site created in Angular<br />
 Under the Hood:<br />
 📐 Responsive: The web site adapts to any formats  <br />
-🚀 Progressive Web App: The web site adapts to any formats  <br />
+🚀 Progressive Web App: a regular web page that behaves like a native mobile applications.  <br />
 🔠 Font Awesome: no png icons, just one font to roule them all  <br />
 ## Google audits
 ![alt audits](/Git%20resources/personal-webite-audits.png)
