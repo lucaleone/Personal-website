@@ -4,13 +4,15 @@
   <h1>Luca Leone</h1>
   <h2>Software Engineer</h2>
   <br>
-  <h3>Passionate software engineer with 4+ years of experience, I love to spread my passion and competence.</h3>
+  <h3>Passionate software engineer since always, I love to spread my passion and experience.</h3>
   <div class="line elementCenter"></div>
   <div class="pagesLinks">
     <div routerLink="/" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="fontColorSkills">
       <span class="fas fa-code"><strong> Skills</strong></span>
-      <span class="mobile fas fa-caret-down fa-lg"></span>
-      <span class="desktop fas fa-caret-right"></span>
+      <div [ngClass]="this.router.url=='/'? 'Display': 'Hide'">
+        <span class="mobile fas fa-caret-down fa-lg"></span>
+        <span class="desktop fas fa-caret-right"></span>
+      </div>
     </div>
     <!--<div routerLink="/projects" routerLinkActive="fontColorProjects">-->
       <!--<span class="far fa-lightbulb"><strong> Projects</strong></span>-->
@@ -19,8 +21,10 @@
     <!--</div>-->
     <div routerLink="/contacts" routerLinkActive="fontColorContacts">
       <span class="fa fas fa-at"><strong>Contacts</strong></span>
-      <span class="mobile fas fa-caret-down fa-lg"></span>
-      <span class="desktop fas fa-caret-right"></span>
+      <div [ngClass]="this.router.url=='/contacts'? 'Display': 'Hide'">
+        <span class="mobile fas fa-caret-down fa-lg"></span>
+        <span class="desktop fas fa-caret-right"></span>
+      </div>
     </div>
   </div>
 </header>

@@ -8,8 +8,8 @@
   padding-right: var(--margin-layout, 20px);
 }
 .LucaImg {
-  width: 8rem;
-  height: 8rem;
+  width: 8.5rem;
+  height: 8.5rem;
   border-radius: 50%;
   background-image: url('../../../assets/Luca_Leone_profile.jpg');
   background-position: center;
@@ -17,8 +17,6 @@
   background-size: cover;
 }
 
-@media only screen and (min-width: 700px), only screen and (orientation: landscape) {
-  :host{
-    max-width: 20rem;
-  }
-}
+/*@media only screen and (min-width: 780px), only screen and (orientation: landscape) {*/
+ /**/
+/*}*/

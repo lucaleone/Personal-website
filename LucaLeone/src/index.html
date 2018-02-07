@@ -3,31 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="Description">
   <meta name="keywords" content="Luca, Leone, Microsoft, CERN">
   <title>Luca Leone</title>
   <base href="/">
-  <style>.loading{display:none;position:fixed;height:100%;width:100%;background:#003561;padding-top:25vh;text-align:center;color:#fff;z-index:-1}.loading>h1{color:#fff!important}.loading img{width:3.3rem;height:3.3rem}app-root:empty+.loading{display:block;z-index:100}</style>
+  <style>.loading{position:fixed;height:100%;width:100%;background:#003561;padding-top:25vh;text-align:center;color:#fff;z-index:-100;animation:loading-fade 1.8s ease-out;animation-fill-mode:forwards}.loading>h1{color:#fff!important}.loading img{width:2.8rem;height:2.8rem}@keyframes loading-fade{0%{opacity:1;display:block;z-index:100}99%{opacity:0}100%{z-index:-100;visibility:hidden}}</style>
   <!-- Manifest.json  -->
   <link href="manifest.json" rel="manifest">
-
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <!-- Android  -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="white">
   <meta name="mobile-web-app-capable" content="yes">
-
   <!-- iOS -->
   <meta name="apple-mobile-web-app-title" content="Luca Leone">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#B30000">
-
   <!-- Windows  -->
   <meta name="msapplication-navbutton-color" content="white">
   <meta name="msapplication-TileColor" content="white">
   <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
-
   <!-- Pinned Sites  -->
   <meta name="application-name" content="Luca Leone">
   <meta name="msapplication-tooltip" content="Short description">
@@ -45,7 +40,6 @@
   <meta name="imagemode" content="force">
   <!-- Orientation  -->
   <meta name="screen-orientation" content="portrait">
-
   <!-- Main Link Tags  -->
   <link href="icons/favicon-48x48.png" rel="icon" type="image/png" sizes="48x48">
   <!-- iOS  -->
@@ -70,18 +64,14 @@
 <div align="center" class="loading">
   <h1>Luca Leone</h1>
   <br>
-  <p><img src="assets/loading.gif" width="100" height="100" alt="loading..."></p>
+  <p><img src="assets/loading.gif" width="150" height="150" alt="loading..."></p>
   loading...
 </div>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="assets/css/styles.min.css" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
 <app-root></app-root>
-<script>
-  function calcVH() {
-    var vH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    document.body.setAttribute("style", "height:" + vH + "px !important;");
-  }
-  calcVH();
-  window.addEventListener('resize', calcVH, true);
-</script>
+<script type="text/javascript">function calcVH() {var vH=Math.max(document.documentElement.clientHeight, window.innerHeight || 0); document.body.setAttribute("style", "height:" + vH + "px !important;"); }calcVH(); window.addEventListener('resize', calcVH, true);</script>
+<noscript>Your browser does not support JavaScript!</noscript>
 </body>
 </html>

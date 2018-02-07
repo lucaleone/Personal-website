@@ -20,9 +20,8 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-size: var(--font-size, 16px);
+  font-size: var(--font-size, 17px);
   background: white;
-  overflow: hidden;
 }
 
 :focus {
@@ -36,6 +35,7 @@ body, html {
 body {
   font-family: 'Raleway', sans-serif;
   height: 100vh;
+  /* overflow: hidden; */
 }
 
 img, embed, object, video {
@@ -142,7 +142,7 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-flow:column wrap;
+  flex-flow: column wrap;
 }
 
 /*Utility*/
@@ -283,14 +283,15 @@ main {
   font-size: 1rem;
   padding: var(--half-margin-layout, 10px);
 }
+
 /*remove??*/
 .profileInfo {
   margin-left: 1rem;
 }
 
-
 div.scrollable {
   display: inline-flex;
+  height: 100%;
 }
 
 .card {
@@ -298,11 +299,14 @@ div.scrollable {
   background: white;
   border-radius: 3px;
   padding: var(--half-margin-layout, 10px);
+  margin: var(--half-margin-layout, 10px);
 }
-.card>ul {
+
+.card > ul {
   padding-top: var(--half-margin-layout, 10px);
   padding-bottom: var(--half-margin-layout, 10px);
 }
+
 .accentFont {
   color: var(--Luca-accent, #c15700);;
 }
@@ -318,20 +322,25 @@ div.scrollable {
   color: white;
   border-color: var(--Luca-mediumGray, #828282);
 }
+
 .linkSymbol {
   font-size: 0.5rem;
   vertical-align: top;
 }
-.pagesLinks{
+
+.pagesLinks {
   display: flex;
   justify-content: space-evenly;
 }
-.pagesLinks>div{
+
+.pagesLinks > div {
   padding: 1rem 0.2rem;
 }
+
 .pagesLinks span {
   display: block;
   font-size: 1.15rem;
+  line-height: 1.15em;
   text-transform: uppercase;
   cursor: pointer;
   background: var(--Luca-accent, #ae5d00);
@@ -347,8 +356,8 @@ div.scrollable {
   background-image: linear-gradient(to right, rgb(48, 207, 208) 0, rgb(51, 8, 103) 100%) !important;
 }
 
-.fontColorContacts span{
-  background-image: linear-gradient(to right, rgb(69, 38, 148) 0, rgb(207, 74, 0) 100%) !important;
+.fontColorContacts span {
+  background-image: linear-gradient(to right, rgb(47, 100, 167) 0, rgb(87, 219, 174) 100%) !important;
 }
 
 .bkgSkills {
@@ -362,17 +371,28 @@ div.scrollable {
 .bkgContacts {
   background-position: -400vw;
 }
+
 .mobile {
   display: inherit !important;
 }
+
 .desktop {
   display: none !important;
 }
+.Display {
+  visibility: inherit !important;
+}
+
+.Hide {
+  visibility: hidden !important;
+}
+
 .moving-bg {
   background-image: linear-gradient(to right,
   #43d863 0, #32d8d9 100vw,
   rgb(48, 207, 208) 200vw, rgb(51, 8, 103) 300vw,
-  rgb(69, 38, 148) 400vw, rgb(207, 74, 0) 500vw);
+  rgb(47, 100, 167) 400vw, rgb(87, 219, 174) 500vw);
+  /*rgb(255, 145, 85) 500vw);*/
   background-size: 500vw 100%;
   will-change: background-position;
   transition: background-position 0.8s ease-out;
@@ -408,7 +428,7 @@ div.scrollable {
   }
 }
 
-@media only screen and (min-width: 700px), only screen and (orientation: landscape) {
+@media only screen and (min-width: 780px), only screen and (orientation: landscape) {
   .mobile {
     display: none !important;
   }
@@ -416,20 +436,49 @@ div.scrollable {
   .desktop {
     display: inherit !important;
   }
+
   .page {
-    flex-flow: row nowrap!important;
-   }
-  .page>* {
-    height: 100%!important;
+    flex-flow: row nowrap !important;
   }
+
+  .page > * {
+    height: 100% !important;
+  }
+
   div.scrollable {
-    display: block!important;
+    display: block !important;
+    align-content: center;
+    text-align: center;
+    height: auto;
   }
-  main{
-    width: 50%!important;
+
+  main {
+    width: 50% !important;
     flex-grow: 1;
   }
-  .card{
-    width: 100%;
+  app-profile{
+    max-width: 20rem !important;
+  }
+  .card {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 780px) {
+  :root {
+    --margin-layout: 24px;
+    --half-margin-layout: 12px;
+    --double-margin-layout: 48px;
+    --negative-margin-layout: -24px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  app-skills, app-projects-list, app-contacts {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }

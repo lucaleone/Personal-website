@@ -22,7 +22,6 @@
       "prefix": "app",
       "serviceWorker": true,
       "styles": [
-        "styles.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
