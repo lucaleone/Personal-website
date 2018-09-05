@@ -4,6 +4,7 @@
   display: flex;
 }
 .profileContainer{
+  width: 100%;
   padding-left: var(--margin-layout, 20px);
   padding-right: var(--margin-layout, 20px);
 }
