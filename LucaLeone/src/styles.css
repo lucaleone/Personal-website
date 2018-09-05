@@ -347,7 +347,9 @@ div.scrollable {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.pagesLinks span>strong {
+  font-family: 'Raleway', sans-serif;
+}
 .fontColorSkills span {
   background-image: linear-gradient(to right, #43d863 0, #32d8d9 100%) !important;
 }
