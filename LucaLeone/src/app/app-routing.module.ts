@@ -31,7 +31,7 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'projects',
+    path: 'achievement',
     component: ProjectsListComponent,
     pathMatch: 'full',
   },
