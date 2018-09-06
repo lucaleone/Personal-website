@@ -339,8 +339,8 @@ div.scrollable {
 
 .pagesLinks span {
   display: block;
-  font-size: 1.15rem;
-  line-height: 1.15em;
+  font-size: 1.1rem;
+  line-height: 1.1em;
   text-transform: uppercase;
   cursor: pointer;
   background: var(--Luca-accent, #ae5d00);
