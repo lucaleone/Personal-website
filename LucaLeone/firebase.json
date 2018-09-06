@@ -23,20 +23,11 @@
         ]
       },
       {
-        "source": "**/*.@(jpg|jpeg|gif|png|svg|js|eot|otf|ttf|ttc|woff|font.css)",
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|js|css|eot|otf|ttf|ttc|woff|font.css)",
         "headers": [
           {
             "key": "Cache-Control",
             "value": "max-age=604800"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(css)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=3"
           }
         ]
       }
