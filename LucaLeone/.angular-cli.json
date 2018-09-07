@@ -11,6 +11,7 @@
         "assets",
         "favicon.ico",
         "icons",
+        "web.config",
         "manifest.json"
       ],
       "index": "index.html",
